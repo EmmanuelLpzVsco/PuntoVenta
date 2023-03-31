@@ -5,7 +5,10 @@ Punto de venta
 import requests
 import json
 import sqlite3
+
 from bottle import Bottle, request, response, HTTPResponse
+
+from base_datos import *
 
 app = Bottle(__name__)
 
@@ -140,4 +143,4 @@ def eliminar_producto(id):
 
 #Iniciar la aplicacion
 if __name__=='__main__':
-    app.run(debug=True)   
+    app.run(debug=True)
