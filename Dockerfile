@@ -19,4 +19,4 @@ RUN pip install bottle requests
 EXPOSE 8080
 
 # Ejecutamos la aplicación cuando se inicie el contenedor
-CMD ["python", "app.py"]
+CMD ["python3", "app.py"]
