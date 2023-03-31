@@ -1,6 +1,4 @@
-Para construir la imagen de Docker, guarda este archivo 
-en un directorio llamado puntodeventa y ejecuta el siguiente 
-comando desde ese directorio:
+ejecuta el siguiente comando desde ese directorio:
 
 docker build -t puntodeventa .
 
