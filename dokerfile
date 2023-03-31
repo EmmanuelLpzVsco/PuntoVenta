@@ -6,13 +6,13 @@ RUN apt-get update && \
     apt-get install -y sqlite3 libsqlite3-dev
 
 # Copiamos el código de la aplicación al contenedor
-COPY PuntodeVenta.py /app/PuntodeVenta.py
+COPY app.py /app/app.py
 
 # Creamos el directorio de trabajo y movemos el código de la aplicación
 WORKDIR /app
 
 # Instalamos las dependencias Python necesarias
-RUN pip install pandas numpy bottle
+RUN pip install pandas numpy bottle json requests
 
 # Exponemos el puerto 8080 (puerto que usa Bottle por defecto)
 EXPOSE 8080
