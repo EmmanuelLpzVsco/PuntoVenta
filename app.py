@@ -5,6 +5,7 @@ Punto de venta
 import requests
 import json
 import sqlite3
+from typing import Dict
 
 from bottle import Bottle, request, response, HTTPResponse
 
@@ -14,7 +15,7 @@ app = Bottle(__name__)
 
 # Definimos la ruta para obtener todos los productos
 @app.get('/productos')
-def obtener_productos()-> dict[str, list]:
+def obtener_productos()-> Dict[str, list]:
     # Creamos una conexión a la base de datos
     conexion = sqlite3.connect('ventas.db')
 
@@ -31,7 +32,7 @@ def obtener_productos()-> dict[str, list]:
 
 # Definimos la ruta para obtener un producto en particular
 @app.get('/productos/<id>')
-def obtener_producto(id)-> (HTTPResponse | dict[str, list]):
+def obtener_producto(id):
     # Creamos una conexión a la base de datos
     conexion = sqlite3.connect('ventas.db')
 
