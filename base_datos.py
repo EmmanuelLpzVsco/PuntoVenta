@@ -88,3 +88,8 @@ def eliminar_producto(id_producto):
     cursor.execute('DELETE FROM productos WHERE id_producto = ?', (id_producto,))
     conexion.commit()
     cerrar_conexion(conexion)
+
+
+if __name__== '__main__':
+    crear_conexion()
+    crear_tabla_productos()
